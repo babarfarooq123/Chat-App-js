@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Chat App</title>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-database.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyAcHN2TWAHn95iEJiUpj_lgzy2vO1hfPqY",
+          authDomain: "hellllo-290fa.firebaseapp.com",
+          databaseURL: "https://hellllo-290fa.firebaseio.com",
+          projectId: "hellllo-290fa",
+          storageBucket: "hellllo-290fa.appspot.com",
+          messagingSenderId: "61707803451",
+          appId: "1:61707803451:web:26d1c3b2e32baece4a751e"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
+    <style>
+        input{
+            /* padding: 10px 8px; */
+            padding: 0px;
+            outline: none;
+            width: 100%;
+            margin-bottom: 5px !important;
+            font-size: large;
+            border: 1px solid black;
+            margin: 0 auto;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .inp-div{
+            width: 100%;
+            text-align: center;
+            height: 10%;
+            align-items: flex-end;
+            justify-content: center;
+        }
+        button{
+            color: red !important;
+        }
+        body{
+            background-color: #efefefef;
+        }
+    </style>
+</head>
+<body>
+        <div class="home-main">
+            <div class="main-child1">
+                <ul class="msgs">
+                
+                </ul>
+            </div>
+        </div>
+    <div class="inp-child1">
+        <div style="width: 80%;">
+            <input onchange="msg(this)" type="text" class="input" placeholder="Enter message">
+        </div>
+    </div>
+
+    <script src="./app2.js" ></script>
+</body>
+</html>
