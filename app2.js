@@ -1,13 +1,13 @@
 function msg(e){
-    console.log(e.value)
+    // console.log(e.value)
 }
 
 document.querySelector('.input').addEventListener('keypress',(event)=>{
     
     if(event.charCode == 13){
-        let urlString = "http://127.0.0.1:5500/home.html?email=babarfarooq99@gmail.com"; 
+        let urlString = location.search; 
         let paramString = urlString.split('?')[1]; 
-        console.log(paramString.split('=')[1])
+        // console.log(paramString.split('=')[1])
 
         var msg = document.querySelector('input').value
         if(msg.length > 0){
@@ -34,7 +34,7 @@ firebase.database().ref('chat').on('value', function(snapshot) {
     // console.log(Object.keys(snapshot.val()))
     var data = snapshot.val()
     Object.keys(snapshot.val()).map((val,ind)=>{
-        console.log(data[val]['idEmail'],data[val]['msg'])
+        // console.log(data[val]['idEmail'],data[val]['msg'])
         var listElement = document.createElement('li')
         var textNode = document.createTextNode(data[val]['idEmail']+': '+data[val]['msg'])
         listElement.appendChild(textNode)

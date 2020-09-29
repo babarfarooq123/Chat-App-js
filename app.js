@@ -10,3 +10,17 @@ var password = document.querySelector('#pwd').value;
         alert(error.message)
     });
 })
+
+function facebookLogin(){
+    var provider = new firebase.auth.FacebookAuthProvider();
+
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+        var token = result.credential.accessToken;
+        var user = result.user;
+        // console.log(user.email)
+        location.replace('./home.html?email='+user.email)
+      }).catch(function(error) {
+        var errorMessage = error.message;
+        console.log(error.message)
+      });
+}
